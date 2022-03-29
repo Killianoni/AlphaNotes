@@ -11,6 +11,8 @@
 		1DC7152A27F3013500763DE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7152927F3013500763DE2 /* ContentView.swift */; };
 		1DC7152C27F3013800763DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7152B27F3013800763DE2 /* Assets.xcassets */; };
 		1DC7152F27F3013800763DE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7152E27F3013800763DE2 /* Preview Assets.xcassets */; };
+		1DC7153727F3025600763DE2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC7153627F3025600763DE2 /* Realm */; };
+		1DC7153927F3025600763DE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC7153827F3025600763DE2 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC7153927F3025600763DE2 /* RealmSwift in Frameworks */,
+				1DC7153727F3025600763DE2 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = AlphaNotes;
+			packageProductDependencies = (
+				1DC7153627F3025600763DE2 /* Realm */,
+				1DC7153827F3025600763DE2 /* RealmSwift */,
+			);
 			productName = AlphaNotes;
 			productReference = 1DC7152427F3013500763DE2 /* AlphaNotes.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 1DC7151B27F3013500763DE2;
+			packageReferences = (
+				1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 1DC7152527F3013500763DE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +352,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DC7153627F3025600763DE2 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1DC7153827F3025600763DE2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1DC7151C27F3013500763DE2 /* Project object */;
 }
