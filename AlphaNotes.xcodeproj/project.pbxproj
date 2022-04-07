@@ -8,19 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		1DC7152827F3013500763DE2 /* AlphaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7152727F3013500763DE2 /* AlphaNotesApp.swift */; };
-		1DC7152A27F3013500763DE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7152927F3013500763DE2 /* ContentView.swift */; };
 		1DC7152C27F3013800763DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7152B27F3013800763DE2 /* Assets.xcassets */; };
 		1DC7152F27F3013800763DE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7152E27F3013800763DE2 /* Preview Assets.xcassets */; };
 		1DC7153727F3025600763DE2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC7153627F3025600763DE2 /* Realm */; };
 		1DC7153927F3025600763DE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC7153827F3025600763DE2 /* RealmSwift */; };
+		1DC7153B27F30E6300763DE2 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7153A27F30E6300763DE2 /* TabBarView.swift */; };
+		1DC7154127F3100F00763DE2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154027F3100F00763DE2 /* HistoryView.swift */; };
+		1DC7154327F3101E00763DE2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154227F3101E00763DE2 /* WorkoutView.swift */; };
+		1DC7154627F310C800763DE2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154527F310C800763DE2 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DC7152427F3013500763DE2 /* AlphaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7152727F3013500763DE2 /* AlphaNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaNotesApp.swift; sourceTree = "<group>"; };
-		1DC7152927F3013500763DE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1DC7152B27F3013800763DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC7152E27F3013800763DE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1DC7153A27F30E6300763DE2 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		1DC7154027F3100F00763DE2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		1DC7154227F3101E00763DE2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		1DC7154527F310C800763DE2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +61,13 @@
 		1DC7152627F3013500763DE2 /* AlphaNotes */ = {
 			isa = PBXGroup;
 			children = (
+				1DC7153C27F30E7400763DE2 /* Main */,
 				1DC7152727F3013500763DE2 /* AlphaNotesApp.swift */,
-				1DC7152927F3013500763DE2 /* ContentView.swift */,
-				1DC7152B27F3013800763DE2 /* Assets.xcassets */,
+				1DC7153A27F30E6300763DE2 /* TabBarView.swift */,
+				1DC7153D27F30E8500763DE2 /* History */,
+				1DC7153E27F30F5F00763DE2 /* Workout */,
+				1DC7154427F3103100763DE2 /* Profile */,
+				1DC7153F27F30F7700763DE2 /* Assets */,
 				1DC7152D27F3013800763DE2 /* Preview Content */,
 			);
 			path = AlphaNotes;
@@ -69,6 +79,45 @@
 				1DC7152E27F3013800763DE2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1DC7153C27F30E7400763DE2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1DC7153D27F30E8500763DE2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				1DC7154027F3100F00763DE2 /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		1DC7153E27F30F5F00763DE2 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				1DC7154227F3101E00763DE2 /* WorkoutView.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		1DC7153F27F30F7700763DE2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1DC7152B27F3013800763DE2 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		1DC7154427F3103100763DE2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1DC7154527F310C800763DE2 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +197,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC7152A27F3013500763DE2 /* ContentView.swift in Sources */,
+				1DC7153B27F30E6300763DE2 /* TabBarView.swift in Sources */,
+				1DC7154127F3100F00763DE2 /* HistoryView.swift in Sources */,
+				1DC7154627F310C800763DE2 /* ProfileView.swift in Sources */,
+				1DC7154327F3101E00763DE2 /* WorkoutView.swift in Sources */,
 				1DC7152827F3013500763DE2 /* AlphaNotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -262,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,6 +340,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,6 +370,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
