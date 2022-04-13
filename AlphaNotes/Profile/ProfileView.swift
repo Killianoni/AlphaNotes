@@ -8,26 +8,36 @@
 import SwiftUI
 
 struct ProfileView: View {
-    var body: some View {
+	var body: some View {
 		NavigationView {
-			List {
-				
+			Form {
+				Section {
+					NavigationLink {
+						AccountView()
+					} label: {
+						HStack {
+							Label("<mail address>", systemImage: "envelope")
+						}
+					}
+				} header: {
+					Text("Account")
+				}
 			}
 			.navigationTitle("Profil")
 			.navigationBarItems(
 				trailing:
-					Button {
-						//add workout
+					NavigationLink {
+						SettingsView()
 					} label: {
 						Image(systemName: "gearshape.fill")
 					}
 			)
 		}
-    }
+	}
 }
 
 struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-    }
+	static var previews: some View {
+		ProfileView()
+	}
 }
