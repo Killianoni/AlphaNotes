@@ -9,17 +9,18 @@ import SwiftUI
 
 struct AddWorkoutView: View {
 	@ObservedObject var vm = AddWorkoutViewModel()
+	
 	var body: some View {
 		NavigationView {
 			Form {
 				Section {
-					//TextField("Exercice Name")
-					//TextField("Primary Muscle")
-					//TextField("Secondary Muscle")
+					TextField("Exercice Name", text: $vm.name)
+					TextField("Primary Muscle", text: $vm.muscle1)
+					TextField("Secondary Muscle", text: $vm.muscle2)
 				}
 				Section {
 					Button {
-						//add exercice
+						vm.addExercice()
 					} label: {
 						HStack {
 							Spacer()

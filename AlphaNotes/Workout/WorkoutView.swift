@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct WorkoutView: View {
-    var body: some View {
+	@ObservedObject var vm = WorkoutViewModel()
+	var body: some View {
 		NavigationView {
 			List {
-				
+				if vm.exercices.isEmpty {
+					HStack {
+						Spacer()
+						Text("Please add a new exercice")
+						Spacer()
+					}
+				} else {
+					ForEach(vm.exercices) { exercice in
+						HStack {
+							if let name = exercice.name {
+								Text(name)
+							}
+						}
+					}
+				}
 			}
 			.navigationTitle("Entrainements")
 			.navigationBarItems(
@@ -24,18 +39,20 @@ struct WorkoutView: View {
 			)
 			.navigationBarItems(
 				trailing:
-					Button {
-						//add workout
+					NavigationLink {
+						AddWorkoutView()
 					} label: {
 						Image(systemName: "plus")
 					}
 			)
+		}.onAppear {
+			vm.fetchExercices()
 		}
-    }
+	}
 }
 
 struct WorkoutView_Previews: PreviewProvider {
-    static var previews: some View {
-        WorkoutView()
-    }
+	static var previews: some View {
+		WorkoutView()
+	}
 }
