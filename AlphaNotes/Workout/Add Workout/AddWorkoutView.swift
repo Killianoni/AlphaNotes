@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct AddWorkoutView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	@ObservedObject var vm = AddWorkoutViewModel()
+	var body: some View {
+		NavigationView {
+			Form {
+				Section {
+					//TextField("Exercice Name")
+					//TextField("Primary Muscle")
+					//TextField("Secondary Muscle")
+				}
+				Section {
+					Button {
+						//add exercice
+					} label: {
+						HStack {
+							Spacer()
+							Text("Add")
+								.font(.headline)
+							Spacer()
+						}
+					}
+				}
+			}
+			.navigationTitle("Add Exercice")
+			.navigationBarTitleDisplayMode(.inline)
+		}
+	}
 }
 
 struct AddWorkoutView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddWorkoutView()
-    }
+	static var previews: some View {
+		AddWorkoutView()
+	}
 }

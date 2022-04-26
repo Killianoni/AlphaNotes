@@ -1,8 +1,12 @@
 //
-//  RegiserModelView.swift
+//  AddWorkoutViewModel.swift
 //  AlphaNotes
 //
 //  Created by Killian Adonaï on 13/04/2022.
 //
 
 import Foundation
+
+class AddWorkoutViewModel: ObservableObject {
+	
+}
