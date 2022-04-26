@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D71F10A28183B2000967FEE /* AlphaNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */; };
 		1DAF89852806E6D200E8A2F3 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF89842806E6D200E8A2F3 /* HistoryViewModel.swift */; };
 		1DAF89872806E6DE00E8A2F3 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF89862806E6DE00E8A2F3 /* WorkoutViewModel.swift */; };
 		1DAF89892806E6F400E8A2F3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF89882806E6F400E8A2F3 /* ProfileViewModel.swift */; };
@@ -30,10 +31,10 @@
 		1DC7154127F3100F00763DE2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154027F3100F00763DE2 /* HistoryView.swift */; };
 		1DC7154327F3101E00763DE2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154227F3101E00763DE2 /* WorkoutView.swift */; };
 		1DC7154627F310C800763DE2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154527F310C800763DE2 /* ProfileView.swift */; };
-		1DF6B1D42817DAF8006A75CE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DF6B1D22817DAF8006A75CE /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D71F10928183B2000967FEE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		1DAF89842806E6D200E8A2F3 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		1DAF89862806E6DE00E8A2F3 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		1DAF89882806E6F400E8A2F3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		1DC7154027F3100F00763DE2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		1DC7154227F3101E00763DE2 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		1DC7154527F310C800763DE2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		1DF6B1D32817DAF8006A75CE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +224,7 @@
 		1DF6B1D12817DACD006A75CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1DF6B1D22817DAF8006A75CE /* Model.xcdatamodeld */,
+				1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,7 +313,6 @@
 				1DAF89A42806F07100E8A2F3 /* AddWorkoutView.swift in Sources */,
 				1DAF89852806E6D200E8A2F3 /* HistoryViewModel.swift in Sources */,
 				1DC7154127F3100F00763DE2 /* HistoryView.swift in Sources */,
-				1DF6B1D42817DAF8006A75CE /* Model.xcdatamodeld in Sources */,
 				1DAF898F2806ED3A00E8A2F3 /* AccountView.swift in Sources */,
 				1DC7154627F310C800763DE2 /* ProfileView.swift in Sources */,
 				1DC7154327F3101E00763DE2 /* WorkoutView.swift in Sources */,
@@ -323,6 +322,7 @@
 				1DAF89892806E6F400E8A2F3 /* ProfileViewModel.swift in Sources */,
 				1DAF89872806E6DE00E8A2F3 /* WorkoutViewModel.swift in Sources */,
 				1DAF89942806EDB800E8A2F3 /* SettingsViewModel.swift in Sources */,
+				1D71F10A28183B2000967FEE /* AlphaNotes.xcdatamodeld in Sources */,
 				1DAF89A62806F08300E8A2F3 /* AddWorkoutViewModel.swift in Sources */,
 				1DAF899F2806F03300E8A2F3 /* LoginView.swift in Sources */,
 				1DAF89962806EDC600E8A2F3 /* SettingsView.swift in Sources */,
@@ -556,13 +556,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		1DF6B1D22817DAF8006A75CE /* Model.xcdatamodeld */ = {
+		1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1DF6B1D32817DAF8006A75CE /* Model.xcdatamodel */,
+				1D71F10928183B2000967FEE /* Model.xcdatamodel */,
 			);
-			currentVersion = 1DF6B1D32817DAF8006A75CE /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = 1D71F10928183B2000967FEE /* Model.xcdatamodel */;
+			path = AlphaNotes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

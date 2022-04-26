@@ -25,6 +25,8 @@ struct WorkoutView: View {
 								Text(name)
 							}
 						}
+					}.onDelete { offsets in
+						vm.deleteExercice(at: offsets)
 					}
 				}
 			}
@@ -39,12 +41,16 @@ struct WorkoutView: View {
 			)
 			.navigationBarItems(
 				trailing:
-					NavigationLink {
-						AddWorkoutView()
+					Button {
+						vm.showAddWorkoutView.toggle()
 					} label: {
 						Image(systemName: "plus")
 					}
-			)
+			).sheet(
+				isPresented: $vm.showAddWorkoutView,
+				onDismiss: {
+					vm.fetchExercices()
+				}) { AddWorkoutView() }
 		}.onAppear {
 			vm.fetchExercices()
 		}

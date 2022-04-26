@@ -66,4 +66,17 @@ struct DBManager {
 		}
 	}
 	
+	@discardableResult
+	func deleteExercice(by id: NSManagedObjectID) -> Result<Void, Error> {
+		let context = container.viewContext
+		do {
+			let exercice = try context.existingObject(with: id) as! Exercice
+			context.delete(exercice)
+			try context.save()
+			return .success(())
+		} catch {
+			return .failure(error)
+		}
+	}
+	
 }
