@@ -19,10 +19,12 @@ struct AddWorkoutView: View {
 				
 				Section {
 					Button {
-						//
+						vm.showExerciceView.toggle()
 					} label: {
 						Text("Add Exercice")
-					}
+					}.sheet(
+						isPresented: $vm.showExerciceView
+					) { ExerciceView() }
 				}
 				
 				Section {

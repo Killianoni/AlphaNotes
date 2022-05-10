@@ -44,6 +44,7 @@ struct AddExerciceView: View {
 				}
 				.navigationTitle("Add Exercice")
 				.navigationBarTitleDisplayMode(.inline)
+				
 			}
 		}
 	}

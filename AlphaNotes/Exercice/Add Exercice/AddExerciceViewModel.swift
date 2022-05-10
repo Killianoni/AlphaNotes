@@ -16,6 +16,7 @@ class AddExerciceViewModel: ObservableObject {
 	@Published var muscle2: String = ""
 	@Published var muscles =
 	["Pectoraux", "Dos", "Triceps", "Biceps", "Epaules", "Ischios", "Quadriceps", "Mollets", "A-B"]
+	
 
 	// MARK: - Public
 	

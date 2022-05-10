@@ -13,6 +13,8 @@ class AddWorkoutViewModel: ObservableObject {
 
 	@Published var name: String = ""
 	@Published var exercices: [Exercice] = []
+	@Published var showExerciceView: Bool = false
+	@Published var selectedExercice: SelectedExercice? = nil
 	
 	private let dbmanager = DBManager.shared
 	

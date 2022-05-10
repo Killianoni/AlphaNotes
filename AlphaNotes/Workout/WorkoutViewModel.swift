@@ -31,7 +31,7 @@ class WorkoutViewModel: ObservableObject {
 	func deleteWorkout(at offsets: IndexSet) {
 		offsets.forEach { index in
 			let workout = workouts[index]
-			dbmanager.deleteExercice(by: workout.objectID)
+			dbmanager.deleteWorkout(by: workout.objectID)
 		}
 		workouts.remove(atOffsets: offsets)
 	}
