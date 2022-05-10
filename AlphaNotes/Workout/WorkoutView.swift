@@ -12,21 +12,21 @@ struct WorkoutView: View {
 	var body: some View {
 		NavigationView {
 			List {
-				if vm.exercices.isEmpty {
+				if vm.workouts.isEmpty {
 					HStack {
 						Spacer()
-						Text("Please add a new exercice")
+						Text("No workouts")
 						Spacer()
 					}
 				} else {
-					ForEach(vm.exercices) { exercice in
+					ForEach(vm.workouts) { workout in
 						HStack {
-							if let name = exercice.name {
+							if let name = workout.name {
 								Text(name)
 							}
 						}
 					}.onDelete { offsets in
-						vm.deleteExercice(at: offsets)
+						vm.deleteWorkout(at: offsets)
 					}
 				}
 			}
@@ -49,10 +49,10 @@ struct WorkoutView: View {
 			).sheet(
 				isPresented: $vm.showAddWorkoutView,
 				onDismiss: {
-					vm.fetchExercices()
+					vm.fetchWorkouts()
 				}) { AddWorkoutView() }
 		}.onAppear {
-			vm.fetchExercices()
+			vm.fetchWorkouts()
 		}
 	}
 }

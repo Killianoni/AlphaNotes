@@ -14,13 +14,20 @@ struct AddWorkoutView: View {
 		NavigationView {
 			Form {
 				Section {
-					TextField("Exercice Name", text: $vm.name)
-					TextField("Primary Muscle", text: $vm.muscle1)
-					TextField("Secondary Muscle", text: $vm.muscle2)
+					TextField("Workout Name", text: $vm.name)
 				}
+				
 				Section {
 					Button {
-						vm.addExercice()
+						//
+					} label: {
+						Text("Add Exercice")
+					}
+				}
+				
+				Section {
+					Button {
+						vm.addWorkout()
 					} label: {
 						HStack {
 							Spacer()
@@ -31,8 +38,10 @@ struct AddWorkoutView: View {
 					}
 				}
 			}
-			.navigationTitle("Add Exercice")
+			.navigationTitle("Add Workout")
 			.navigationBarTitleDisplayMode(.inline)
+		}.onAppear {
+			vm.fetchExercices()
 		}
 	}
 }

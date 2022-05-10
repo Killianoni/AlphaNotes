@@ -12,25 +12,31 @@ class AddWorkoutViewModel: ObservableObject {
 	// MARK: - Exposed properties
 
 	@Published var name: String = ""
-	@Published var muscle1: String = ""
-	@Published var muscle2: String = ""
-
-	// MARK: - Public
+	@Published var exercices: [Exercice] = []
 	
-//	init() {
-//		addExercice()
-//	}
+	private let dbmanager = DBManager.shared
 	
-	func addExercice() {
-		let exerciceResult = DBManager.shared.addExercice(
+	init() {
+		fetchExercices()
+	}
+	
+	func fetchExercices() {
+		let exerciceResult = dbmanager.getExercices()
+		switch exerciceResult {
+		case .failure:              return
+		case .success(let exercices):   self.exercices = exercices
+		}
+	}
+	
+	func addWorkout() {
+		let workoutResult = DBManager.shared.addWorkout(
 			name: name,
-			muscle1: muscle1,
-			muscle2: muscle2
+			exercices: exercices
 		)
 		
-		switch exerciceResult {
-		case .success(let exercice):
-			print("Successfully added \(exercice)")
+		switch workoutResult {
+		case .success(let workout):
+			print("Successfully added \(workout)")
 		case .failure(let error):
 			print(error.localizedDescription)
 		}
