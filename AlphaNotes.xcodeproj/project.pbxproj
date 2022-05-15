@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1D71F10A28183B2000967FEE /* AlphaNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */; };
+		1D800B14282D080F00A7D698 /* BaseExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D800B13282D080F00A7D698 /* BaseExercices.swift */; };
+		1D800B16282D086C00A7D698 /* Muscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D800B15282D086C00A7D698 /* Muscles.swift */; };
+		1D9066B5282A4BC7003F6832 /* ExercicesBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9066B4282A4BC7003F6832 /* ExercicesBase.swift */; };
+		1D9066B8282A5749003F6832 /* AddExerciceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9066B7282A5749003F6832 /* AddExerciceViewModel.swift */; };
+		1D9066BA282A5755003F6832 /* AddExerciceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9066B9282A5755003F6832 /* AddExerciceView.swift */; };
+		1DAA31B0282A6DBA004903EF /* ExerciceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA31AF282A6DBA004903EF /* ExerciceView.swift */; };
+		1DAA31B2282A6DCA004903EF /* ExerciceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA31B1282A6DCA004903EF /* ExerciceViewModel.swift */; };
+		1DAA31B4282A7720004903EF /* SelectedExercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA31B3282A7720004903EF /* SelectedExercice.swift */; };
 		1DAF89852806E6D200E8A2F3 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF89842806E6D200E8A2F3 /* HistoryViewModel.swift */; };
 		1DAF89872806E6DE00E8A2F3 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF89862806E6DE00E8A2F3 /* WorkoutViewModel.swift */; };
 		1DAF89892806E6F400E8A2F3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAF89882806E6F400E8A2F3 /* ProfileViewModel.swift */; };
@@ -25,8 +33,6 @@
 		1DC7152827F3013500763DE2 /* AlphaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7152727F3013500763DE2 /* AlphaNotesApp.swift */; };
 		1DC7152C27F3013800763DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7152B27F3013800763DE2 /* Assets.xcassets */; };
 		1DC7152F27F3013800763DE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7152E27F3013800763DE2 /* Preview Assets.xcassets */; };
-		1DC7153727F3025600763DE2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC7153627F3025600763DE2 /* Realm */; };
-		1DC7153927F3025600763DE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC7153827F3025600763DE2 /* RealmSwift */; };
 		1DC7153B27F30E6300763DE2 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7153A27F30E6300763DE2 /* TabBarView.swift */; };
 		1DC7154127F3100F00763DE2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154027F3100F00763DE2 /* HistoryView.swift */; };
 		1DC7154327F3101E00763DE2 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7154227F3101E00763DE2 /* WorkoutView.swift */; };
@@ -35,6 +41,14 @@
 
 /* Begin PBXFileReference section */
 		1D71F10928183B2000967FEE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1D800B13282D080F00A7D698 /* BaseExercices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExercices.swift; sourceTree = "<group>"; };
+		1D800B15282D086C00A7D698 /* Muscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscles.swift; sourceTree = "<group>"; };
+		1D9066B4282A4BC7003F6832 /* ExercicesBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesBase.swift; sourceTree = "<group>"; };
+		1D9066B7282A5749003F6832 /* AddExerciceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceViewModel.swift; sourceTree = "<group>"; };
+		1D9066B9282A5755003F6832 /* AddExerciceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceView.swift; sourceTree = "<group>"; };
+		1DAA31AF282A6DBA004903EF /* ExerciceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceView.swift; sourceTree = "<group>"; };
+		1DAA31B1282A6DCA004903EF /* ExerciceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciceViewModel.swift; sourceTree = "<group>"; };
+		1DAA31B3282A7720004903EF /* SelectedExercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedExercice.swift; sourceTree = "<group>"; };
 		1DAF89842806E6D200E8A2F3 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		1DAF89862806E6DE00E8A2F3 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		1DAF89882806E6F400E8A2F3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -64,14 +78,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC7153927F3025600763DE2 /* RealmSwift in Frameworks */,
-				1DC7153727F3025600763DE2 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D9066B3282A4BA3003F6832 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1D9066B4282A4BC7003F6832 /* ExercicesBase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1D9066B6282A5728003F6832 /* Exercice */ = {
+			isa = PBXGroup;
+			children = (
+				1DAA31AE282A6DA7004903EF /* Add Exercice */,
+				1DAA31AF282A6DBA004903EF /* ExerciceView.swift */,
+				1DAA31B1282A6DCA004903EF /* ExerciceViewModel.swift */,
+			);
+			path = Exercice;
+			sourceTree = "<group>";
+		};
+		1DAA31AE282A6DA7004903EF /* Add Exercice */ = {
+			isa = PBXGroup;
+			children = (
+				1D9066B9282A5755003F6832 /* AddExerciceView.swift */,
+				1D9066B7282A5749003F6832 /* AddExerciceViewModel.swift */,
+			);
+			path = "Add Exercice";
+			sourceTree = "<group>";
+		};
 		1DAF898A2806E70D00E8A2F3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,10 +196,12 @@
 				1DAF89972806EFBD00E8A2F3 /* Authentication */,
 				1DC7153D27F30E8500763DE2 /* History */,
 				1DC7153E27F30F5F00763DE2 /* Workout */,
+				1D9066B6282A5728003F6832 /* Exercice */,
 				1DC7154427F3103100763DE2 /* Profile */,
 				1DAF898A2806E70D00E8A2F3 /* Managers */,
 				1DC7153F27F30F7700763DE2 /* Assets */,
 				1DF6B1D12817DACD006A75CE /* Models */,
+				1D9066B3282A4BA3003F6832 /* Helpers */,
 				1DC7152D27F3013800763DE2 /* Preview Content */,
 			);
 			path = AlphaNotes;
@@ -225,6 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */,
+				1DAA31B3282A7720004903EF /* SelectedExercice.swift */,
+				1D800B13282D080F00A7D698 /* BaseExercices.swift */,
+				1D800B15282D086C00A7D698 /* Muscles.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,8 +290,6 @@
 			);
 			name = AlphaNotes;
 			packageProductDependencies = (
-				1DC7153627F3025600763DE2 /* Realm */,
-				1DC7153827F3025600763DE2 /* RealmSwift */,
 			);
 			productName = AlphaNotes;
 			productReference = 1DC7152427F3013500763DE2 /* AlphaNotes.app */;
@@ -278,7 +320,6 @@
 			);
 			mainGroup = 1DC7151B27F3013500763DE2;
 			packageReferences = (
-				1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 1DC7152527F3013500763DE2 /* Products */;
 			projectDirPath = "";
@@ -306,23 +347,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DAA31B0282A6DBA004903EF /* ExerciceView.swift in Sources */,
 				1DAF89912806ED4500E8A2F3 /* AccountViewModel.swift in Sources */,
 				1DAF898C2806E72800E8A2F3 /* DBManager.swift in Sources */,
 				1DC7153B27F30E6300763DE2 /* TabBarView.swift in Sources */,
 				1DAF899B2806F01600E8A2F3 /* RegisterView.swift in Sources */,
 				1DAF89A42806F07100E8A2F3 /* AddWorkoutView.swift in Sources */,
+				1DAA31B2282A6DCA004903EF /* ExerciceViewModel.swift in Sources */,
+				1D9066B5282A4BC7003F6832 /* ExercicesBase.swift in Sources */,
 				1DAF89852806E6D200E8A2F3 /* HistoryViewModel.swift in Sources */,
 				1DC7154127F3100F00763DE2 /* HistoryView.swift in Sources */,
 				1DAF898F2806ED3A00E8A2F3 /* AccountView.swift in Sources */,
 				1DC7154627F310C800763DE2 /* ProfileView.swift in Sources */,
+				1D9066B8282A5749003F6832 /* AddExerciceViewModel.swift in Sources */,
+				1D9066BA282A5755003F6832 /* AddExerciceView.swift in Sources */,
 				1DC7154327F3101E00763DE2 /* WorkoutView.swift in Sources */,
 				1DC7152827F3013500763DE2 /* AlphaNotesApp.swift in Sources */,
+				1D800B16282D086C00A7D698 /* Muscles.swift in Sources */,
 				1DAF89A12806F03F00E8A2F3 /* LoginViewModel.swift in Sources */,
 				1DAF899D2806F01E00E8A2F3 /* RegisterViewModel.swift in Sources */,
 				1DAF89892806E6F400E8A2F3 /* ProfileViewModel.swift in Sources */,
+				1D800B14282D080F00A7D698 /* BaseExercices.swift in Sources */,
 				1DAF89872806E6DE00E8A2F3 /* WorkoutViewModel.swift in Sources */,
 				1DAF89942806EDB800E8A2F3 /* SettingsViewModel.swift in Sources */,
 				1D71F10A28183B2000967FEE /* AlphaNotes.xcdatamodeld in Sources */,
+				1DAA31B4282A7720004903EF /* SelectedExercice.swift in Sources */,
 				1DAF89A62806F08300E8A2F3 /* AddWorkoutViewModel.swift in Sources */,
 				1DAF899F2806F03300E8A2F3 /* LoginView.swift in Sources */,
 				1DAF89962806EDC600E8A2F3 /* SettingsView.swift in Sources */,
@@ -530,30 +579,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.19.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1DC7153627F3025600763DE2 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		1DC7153827F3025600763DE2 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1DC7153527F3025600763DE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */ = {

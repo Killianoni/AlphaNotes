@@ -6,31 +6,43 @@
 //
 
 import Foundation
+import CoreData.NSManagedObjectID
 
 class AddWorkoutViewModel: ObservableObject {
 	
 	// MARK: - Exposed properties
 
 	@Published var name: String = ""
-	@Published var muscle1: String = ""
-	@Published var muscle2: String = ""
+	@Published var exercices: [Exercice] = []
+	@Published var showExerciceView: Bool = false
+	@Published var allExercices: [Int] = []
+	@Published var selectedExercice: SelectedExercice = SelectedExercice(
+		exerciceId: NSManagedObjectID(),
+		exerciceName: "")
+	
+	private let dbmanager = DBManager.shared
+	
+	init() {
+		fetchExercices()
+	}
 
-	// MARK: - Public
+	func fetchExercices() {
+		let exerciceResult = dbmanager.getExercices()
+		switch exerciceResult {
+		case .failure:              return
+		case .success(let exercices):   self.exercices = exercices
+		}
+	}
 	
-//	init() {
-//		addExercice()
-//	}
-	
-	func addExercice() {
-		let exerciceResult = DBManager.shared.addExercice(
+	func addWorkout() {
+		let workoutResult = DBManager.shared.addWorkout(
 			name: name,
-			muscle1: muscle1,
-			muscle2: muscle2
+			exercicesId: allExercices
 		)
 		
-		switch exerciceResult {
-		case .success(let exercice):
-			print("Successfully added \(exercice)")
+		switch workoutResult {
+		case .success(let workout):
+			print("Successfully added \(workout)")
 		case .failure(let error):
 			print(error.localizedDescription)
 		}

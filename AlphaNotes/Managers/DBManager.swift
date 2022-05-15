@@ -53,14 +53,45 @@ struct DBManager {
 		let fetchRequest = Exercice.fetchRequest()
 		let descriptor: NSSortDescriptor = NSSortDescriptor(key: "muscle1", ascending: true)
 		fetchRequest.sortDescriptors = [descriptor]
-//		let predicate = NSPredicate(format: "isFavorite == true")
-//
-//		if shouldFetchOnlyFavs { fetchRequest.predicate = predicate }
 		let context = container.viewContext
 
 		do {
 			let exercices = try context.fetch(fetchRequest)
 			return .success(exercices)
+		} catch {
+			return .failure(error)
+		}
+	}
+	
+	func getWorkout() -> Result<[Workout], Error> {
+		let fetchRequest = Workout.fetchRequest()
+		let descriptor: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+		fetchRequest.sortDescriptors = [descriptor]
+		let context = container.viewContext
+
+		do {
+			let workouts = try context.fetch(fetchRequest)
+			return .success(workouts)
+		} catch {
+			return .failure(error)
+		}
+	}
+	
+	func addWorkout(
+		name: String,
+		exercicesId: [Int],
+		
+		workoutId: NSManagedObjectID? = nil
+	) -> Result<Workout, Error> {
+
+		let context = container.viewContext
+		let workout = Workout(entity: Workout.entity(),
+						insertInto: DBManager.shared.container.viewContext)
+		workout.name = name
+
+		do {
+			try context.save()
+			return .success(workout)
 		} catch {
 			return .failure(error)
 		}
@@ -72,6 +103,19 @@ struct DBManager {
 		do {
 			let exercice = try context.existingObject(with: id) as! Exercice
 			context.delete(exercice)
+			try context.save()
+			return .success(())
+		} catch {
+			return .failure(error)
+		}
+	}
+	
+	@discardableResult
+	func deleteWorkout(by id: NSManagedObjectID) -> Result<Void, Error> {
+		let context = container.viewContext
+		do {
+			let workout = try context.existingObject(with: id) as! Workout
+			context.delete(workout)
 			try context.save()
 			return .success(())
 		} catch {

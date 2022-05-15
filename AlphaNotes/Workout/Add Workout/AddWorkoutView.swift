@@ -14,13 +14,30 @@ struct AddWorkoutView: View {
 		NavigationView {
 			Form {
 				Section {
-					TextField("Exercice Name", text: $vm.name)
-					TextField("Primary Muscle", text: $vm.muscle1)
-					TextField("Secondary Muscle", text: $vm.muscle2)
+					TextField("Workout Name", text: $vm.name)
 				}
+				
+//				Section {
+//					if let selectedExercice = vm.selectedExercice {
+//						Text(selectedExercice.exerciceName)
+//							.font(.callout)
+//							.foregroundColor(.secondary)
+//					}
+//				}
+				
 				Section {
 					Button {
-						vm.addExercice()
+						vm.showExerciceView.toggle()
+					} label: {
+						Text("Add Exercice")
+					}.sheet(
+						isPresented: $vm.showExerciceView
+					) { ExerciceView(selectedExercice: vm.selectedExercice) }
+				}
+				
+				Section {
+					Button {
+						vm.addWorkout()
 					} label: {
 						HStack {
 							Spacer()
@@ -29,10 +46,15 @@ struct AddWorkoutView: View {
 							Spacer()
 						}
 					}
+					.disabled(vm.name.isEmpty ||
+							  vm.name.trimmingCharacters(in: .whitespacesAndNewlines) == "")
 				}
 			}
-			.navigationTitle("Add Exercice")
+			.navigationTitle("Add Workout")
 			.navigationBarTitleDisplayMode(.inline)
+		}
+		.onAppear {
+			vm.fetchExercices()
 		}
 	}
 }
