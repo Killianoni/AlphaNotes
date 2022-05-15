@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData.NSManagedObjectID
 
 class AddWorkoutViewModel: ObservableObject {
 	
@@ -14,14 +15,17 @@ class AddWorkoutViewModel: ObservableObject {
 	@Published var name: String = ""
 	@Published var exercices: [Exercice] = []
 	@Published var showExerciceView: Bool = false
-	@Published var selectedExercice: SelectedExercice? = nil
+	@Published var allExercices: [Int] = []
+	@Published var selectedExercice: SelectedExercice = SelectedExercice(
+		exerciceId: NSManagedObjectID(),
+		exerciceName: "")
 	
 	private let dbmanager = DBManager.shared
 	
 	init() {
 		fetchExercices()
 	}
-	
+
 	func fetchExercices() {
 		let exerciceResult = dbmanager.getExercices()
 		switch exerciceResult {
@@ -33,7 +37,7 @@ class AddWorkoutViewModel: ObservableObject {
 	func addWorkout() {
 		let workoutResult = DBManager.shared.addWorkout(
 			name: name,
-			exercices: exercices
+			exercicesId: allExercices
 		)
 		
 		switch workoutResult {

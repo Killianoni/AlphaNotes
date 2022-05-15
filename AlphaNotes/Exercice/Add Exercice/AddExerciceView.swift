@@ -40,6 +40,9 @@ struct AddExerciceView: View {
 								.font(.headline)
 							Spacer()
 						}
+						.disabled(vm.name.isEmpty
+								  || vm.name.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+								  || vm.muscle1.isEmpty)
 					}
 				}
 				.navigationTitle("Add Exercice")

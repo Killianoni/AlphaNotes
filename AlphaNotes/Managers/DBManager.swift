@@ -79,7 +79,7 @@ struct DBManager {
 	
 	func addWorkout(
 		name: String,
-		exercices: [Exercice],
+		exercicesId: [Int],
 		
 		workoutId: NSManagedObjectID? = nil
 	) -> Result<Workout, Error> {

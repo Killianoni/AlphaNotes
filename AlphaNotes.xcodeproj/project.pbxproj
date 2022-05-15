@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D71F10A28183B2000967FEE /* AlphaNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */; };
+		1D800B14282D080F00A7D698 /* BaseExercices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D800B13282D080F00A7D698 /* BaseExercices.swift */; };
+		1D800B16282D086C00A7D698 /* Muscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D800B15282D086C00A7D698 /* Muscles.swift */; };
 		1D9066B5282A4BC7003F6832 /* ExercicesBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9066B4282A4BC7003F6832 /* ExercicesBase.swift */; };
 		1D9066B8282A5749003F6832 /* AddExerciceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9066B7282A5749003F6832 /* AddExerciceViewModel.swift */; };
 		1D9066BA282A5755003F6832 /* AddExerciceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9066B9282A5755003F6832 /* AddExerciceView.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		1D71F10928183B2000967FEE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1D800B13282D080F00A7D698 /* BaseExercices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseExercices.swift; sourceTree = "<group>"; };
+		1D800B15282D086C00A7D698 /* Muscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscles.swift; sourceTree = "<group>"; };
 		1D9066B4282A4BC7003F6832 /* ExercicesBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesBase.swift; sourceTree = "<group>"; };
 		1D9066B7282A5749003F6832 /* AddExerciceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceViewModel.swift; sourceTree = "<group>"; };
 		1D9066B9282A5755003F6832 /* AddExerciceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciceView.swift; sourceTree = "<group>"; };
@@ -263,6 +267,8 @@
 			children = (
 				1D71F10828183B2000967FEE /* AlphaNotes.xcdatamodeld */,
 				1DAA31B3282A7720004903EF /* SelectedExercice.swift */,
+				1D800B13282D080F00A7D698 /* BaseExercices.swift */,
+				1D800B15282D086C00A7D698 /* Muscles.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,9 +363,11 @@
 				1D9066BA282A5755003F6832 /* AddExerciceView.swift in Sources */,
 				1DC7154327F3101E00763DE2 /* WorkoutView.swift in Sources */,
 				1DC7152827F3013500763DE2 /* AlphaNotesApp.swift in Sources */,
+				1D800B16282D086C00A7D698 /* Muscles.swift in Sources */,
 				1DAF89A12806F03F00E8A2F3 /* LoginViewModel.swift in Sources */,
 				1DAF899D2806F01E00E8A2F3 /* RegisterViewModel.swift in Sources */,
 				1DAF89892806E6F400E8A2F3 /* ProfileViewModel.swift in Sources */,
+				1D800B14282D080F00A7D698 /* BaseExercices.swift in Sources */,
 				1DAF89872806E6DE00E8A2F3 /* WorkoutViewModel.swift in Sources */,
 				1DAF89942806EDB800E8A2F3 /* SettingsViewModel.swift in Sources */,
 				1D71F10A28183B2000967FEE /* AlphaNotes.xcdatamodeld in Sources */,

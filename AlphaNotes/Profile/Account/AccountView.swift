@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct AccountView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	@State var selection: Set<String>
+	
+	let names = [
+		"Cyril",
+		"Lana",
+		"Mallory",
+		"Sterling"
+	]
+	var body: some View {
+		NavigationView {
+			List(names, id: \.self, selection: $selection) { name in
+				Text(name)
+			}
+			.navigationTitle("List Selection")
+			.toolbar {
+				EditButton()
+			}
+		}
+	}
 }
 
 struct AccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountView()
-    }
+	static var previews: some View {
+		AccountView(selection: Set())
+	}
 }

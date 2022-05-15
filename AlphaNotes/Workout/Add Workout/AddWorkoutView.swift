@@ -17,6 +17,14 @@ struct AddWorkoutView: View {
 					TextField("Workout Name", text: $vm.name)
 				}
 				
+//				Section {
+//					if let selectedExercice = vm.selectedExercice {
+//						Text(selectedExercice.exerciceName)
+//							.font(.callout)
+//							.foregroundColor(.secondary)
+//					}
+//				}
+				
 				Section {
 					Button {
 						vm.showExerciceView.toggle()
@@ -24,7 +32,7 @@ struct AddWorkoutView: View {
 						Text("Add Exercice")
 					}.sheet(
 						isPresented: $vm.showExerciceView
-					) { ExerciceView() }
+					) { ExerciceView(selectedExercice: vm.selectedExercice) }
 				}
 				
 				Section {
@@ -38,11 +46,14 @@ struct AddWorkoutView: View {
 							Spacer()
 						}
 					}
+					.disabled(vm.name.isEmpty ||
+							  vm.name.trimmingCharacters(in: .whitespacesAndNewlines) == "")
 				}
 			}
 			.navigationTitle("Add Workout")
 			.navigationBarTitleDisplayMode(.inline)
-		}.onAppear {
+		}
+		.onAppear {
 			vm.fetchExercices()
 		}
 	}

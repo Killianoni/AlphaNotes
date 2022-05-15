@@ -27,4 +27,12 @@ class ExerciceViewModel: ObservableObject {
 		case .success(let exercices):   self.exercices = exercices
 		}
 	}
+	
+	func deleteExercice(at offsets: IndexSet) {
+		offsets.forEach { index in
+			let exercice = exercices[index]
+			dbmanager.deleteExercice(by: exercice.objectID)
+		}
+		exercices.remove(atOffsets: offsets)
+	}
 }

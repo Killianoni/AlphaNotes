@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExerciceView: View {
 	@ObservedObject private var vm = ExerciceViewModel()
+	@State var selectedExercice: SelectedExercice
 	
 	var body: some View {
 		NavigationView {
@@ -26,12 +27,38 @@ struct ExerciceView: View {
 								Text(name)
 							}
 						}
+						//					List(vm.exercices, id: \.self, selection: $selectedExercice) { exercice in
+						//						if let name = exercice.name {
+						//							HStack {
+						//								Text(name)
+						//								Spacer()
+						//								if exercice.objectID == selectedExercice.exerciceId {
+						//									Image(systemName: "checkmark")
+						//										.foregroundColor(.accentColor)
+						//										.font(.headline)
+						//								}
+						//							}
+						//							.contentShape(Rectangle())
+						//							.onTapGesture {
+						//								withAnimation {
+						//									selectedExercice = SelectedExercice(
+						//										exerciceId: exercice.objectID,
+						//										exerciceName: name,
+						//										exerciceMuscle1: exercice.muscle1!,
+						//										exerciceMuscle2: exercice.muscle2!)
+						//								}
+						//							}
+					}.onDelete { offsets in
+						vm.deleteExercice(at: offsets)
 					}
 				}
 			}
 			
+			
 			.navigationTitle("Exercices")
 			.navigationBarItems(
+				leading:
+					EditButton(),
 				trailing:
 					Button {
 						vm.showAddExerciceView.toggle()
@@ -50,8 +77,3 @@ struct ExerciceView: View {
 	}
 }
 
-struct ExerciceView_Previews: PreviewProvider {
-	static var previews: some View {
-		ExerciceView()
-	}
-}
