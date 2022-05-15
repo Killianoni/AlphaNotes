@@ -1,6 +1,6 @@
 # AlphaNotes
 
- 1. [What is it ?](#what-is-alphanotes-?)
+ 1. [What is it ?](#what-is-alphanotes-)
  2. [How to use it ?](#installation)
  3. [What are the actual features ?](#features)
 
